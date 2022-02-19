@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "CustomViewLayout";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Dot Net Exam</title>
+    @Styles.Render("~/Content/css")
+    @*@Scripts.Render("~/bundles/modernizr")*@
+</head>
+<div class="navbar navbar-inverse navbar-fixed-top bg-info">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                
+            </button>
+            @Html.ActionLink("Poorva Joshi ", "Index", "Products", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Index", "Index", "Products")</li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container body-content">
+
+    @*@RenderBody();*@
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>(Footer)This project is created for exam purpose!!!</p>
+        </footer>
+    </div>
